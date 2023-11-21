@@ -161,18 +161,21 @@ window.addEventListener('scroll', (e) => {
     var nav = document.getElementById('nav');
     var scrollTop = window.pageYOffset || document.body.scrollTop;
     var blockBottom = block.offsetTop + block.offsetHeight;
+    const navlinks = Array.from(document.getElementById("navbar-default").children[0].children);
+    const header_logo = document.getElementsByClassName('header_logo')[0];
 
-    let a = document.getElementById("navbar-default").childNodes[1].children[0]
     if (scrollTop > blockBottom) {
       nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-      for(let i = 0; i < a.length -2; i++) {
-        a[i].children[0].style.color = "black";
-      }
+      header_logo.src = 'images/logo_black.svg';
+      navlinks.forEach((element, i) => {
+        element.children[0].style.color = "black";
+      });
     } else {
       nav.style.backgroundColor = '#000229';
-      for(let i = 0; i < a.length -2; i++) {
-        a[i].children[0].style.color = "white";
-      }
+      header_logo.src = 'images/logo.svg';
+      navlinks.forEach((element, i) => {
+        element.children[0].style.color = "white";
+      });
     }
 });
 
