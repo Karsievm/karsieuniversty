@@ -9,6 +9,7 @@
     scrollbar-width: thin;
     scrollbar-color: #7B82F6 #d1d4d4;
     font-family: 'Montserrat', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
