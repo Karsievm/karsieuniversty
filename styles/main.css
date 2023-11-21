@@ -635,20 +635,20 @@ nav {
     background-position: center center;
 }
 .roadmap_block:nth-child(1) > .roadmap_img {
-    background-image: url("https://earthy-landing.vercel.app/images_roadmap/img1.svg");
+    background-image: url("images/roadmap/1.svg");
 }
 
 .roadmap_block:nth-child(2) > .roadmap_img {
-    background-image: url("https://earthy-landing.vercel.app/images_roadmap/img2.svg");
+    background-image: url("images/roadmap/2.svg");
 }
 .roadmap_block:nth-child(3) > .roadmap_img {
-    background-image: url("https://earthy-landing.vercel.app/images_roadmap/img3.svg");
+    background-image: url("images/roadmap/3.svg");
 }
 .roadmap_block:nth-child(4) > .roadmap_img {
-    background-image: url("https://earthy-landing.vercel.app/images_roadmap/img4.svg");
+    background-image: url("images/roadmap/4.svg");
 }
 .roadmap_block:nth-child(5) > .roadmap_img {
-    background-image: url("https://earthy-landing.vercel.app/images_roadmap/img5.svg");
+    background-image: url("images/roadmap/5.svg");
 }
 
 
@@ -781,7 +781,7 @@ nav {
     }
 
     .sections_buttons {
-        flex-direction: row;
+        flex-direction: center;
     }
 
     .sections_buttons button {
@@ -908,20 +908,20 @@ nav {
     }
 
     .roadmap_block:nth-child(1) > .roadmap_img {
-        background-image: url("https://earthy-landing.vercel.app/images_roadmap/imgBig1.svg");
+        background-image: url("images/roadmap/Big1.svg");
     }
     
     .roadmap_block:nth-child(2) > .roadmap_img {
-        background-image: url("https://earthy-landing.vercel.app/images_roadmap/imgBig2.svg");
+        background-image: url("images/roadmap/Big2.svg");
     }
     .roadmap_block:nth-child(3) > .roadmap_img {
-        background-image: url("https://earthy-landing.vercel.app/images_roadmap/imgBig3.svg");
+        background-image: url("images/roadmap/Big3.svg");
     }
     .roadmap_block:nth-child(4) > .roadmap_img {
-        background-image: url("https://earthy-landing.vercel.app/images_roadmap/imgBig4.svg");
+        background-image: url("images/roadmap/Big4.svg");
     }
     .roadmap_block:nth-child(5) > .roadmap_img {
-        background-image: url("https://earthy-landing.vercel.app/images_roadmap/imgBig5.svg");
+        background-image: url("images/roadmap/Big5.svg");
     }
     
     .section7_box > img {
