@@ -156,26 +156,25 @@ checkVisibility();
 
 // Navbar background
 window.addEventListener('scroll', (e) => {
-  scrollHandler();
-  var block = document.getElementsByClassName('section0')[0];
-  var nav = document.getElementById('nav');
-  var scrollTop = window.pageYOffset || document.body.scrollTop;
-  var blockBottom = block.offsetTop + block.offsetHeight;
+    scrollHandler();
+    var block = document.getElementsByClassName('section0')[0];
+    var nav = document.getElementById('nav');
+    var scrollTop = window.pageYOffset || document.body.scrollTop;
+    var blockBottom = block.offsetTop + block.offsetHeight;
 
-  let a = document.getElementById("navbar-default").childNodes[1].children
-  if (scrollTop > blockBottom) {
-    for(let i = 0; i < a.length -2; i++) {
-      a[i].children[0].style.color = "black";
+    let a = document.getElementById("navbar-default").childNodes[1].children[0]
+    if (scrollTop > blockBottom) {
+      nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
+      for(let i = 0; i < a.length -2; i++) {
+        a[i].children[0].style.color = "black";
+      }
+    } else {
+      nav.style.backgroundColor = '#000229';
+      for(let i = 0; i < a.length -2; i++) {
+        a[i].children[0].style.color = "white";
+      }
     }
-    nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-  } else {
-    for(let i = 0; i < a.length -2; i++) {
-      a[i].children[0].style.color = "white";
-    }
-    nav.style.backgroundColor = 'rgb(74, 255, 201)';
-  }
 });
-
 
 //
 function onEntry(entry) {
