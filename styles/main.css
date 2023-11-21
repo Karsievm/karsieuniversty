@@ -560,7 +560,6 @@ nav {
 
 .section6 img {
     width: 80%;
-    padding-right: 200px;
 }
 
 /* contacts */
@@ -743,7 +742,7 @@ nav {
 
 .sections_buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
 }
 
