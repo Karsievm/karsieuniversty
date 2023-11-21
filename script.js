@@ -5,6 +5,8 @@ let header_mobile_button = '';
 function OpenMobileMenu() {
     isOpennedMenu = !isOpennedMenu;
     if(isOpennedMenu) {
+        const header_logo = document.getElementsByClassName('header_logo')[0];
+        header_logo.src = 'images/logo_black.svg';
         document.body.classList.add('lock');
         header_mobile_button = document.getElementsByClassName('header_mobile-button')[0].innerHTML;
         document.getElementsByClassName('header_mobile-button')[0].innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 52 52" xml:space="preserve"><path d="m31 25.4 13-13.1c.6-.6.6-1.5 0-2.1l-2-2.1c-.6-.6-1.5-.6-2.1 0L26.8 21.2c-.4.4-1 .4-1.4 0L12.3 8c-.6-.6-1.5-.6-2.1 0l-2.1 2.1c-.6.6-.6 1.5 0 2.1l13.1 13.1c.4.4.4 1 0 1.4L8 39.9c-.6.6-.6 1.5 0 2.1l2.1 2.1c.6.6 1.5.6 2.1 0L25.3 31c.4-.4 1-.4 1.4 0l13.1 13.1c.6.6 1.5.6 2.1 0L44 42c.6-.6.6-1.5 0-2.1L31 26.8c-.4-.4-.4-1 0-1.4z"/></svg>`
@@ -13,6 +15,10 @@ function OpenMobileMenu() {
             document.getElementById('navbar-default').children[0].style.transform = "translateX(0%)"
         }, 100)
     } else {
+        var block = document.getElementsByClassName('section0')[0];
+        var scrollTop = window.pageYOffset || document.body.scrollTop;
+        var blockBottom = block.offsetTop + block.offsetHeight;
+        colorElements(scrollTop, blockBottom)
         document.body.classList.remove('lock');
         document.getElementsByClassName('header_mobile-button')[0].innerHTML = header_mobile_button;
         document.getElementById('navbar-default').children[0].style.transform = "translateX(100%)"
@@ -156,44 +162,48 @@ window.addEventListener('resize', () => {
 
 checkVisibility();
 
+function colorElements(scrollTop, blockBottom) {
+  var nav = document.getElementById('nav');
+  const navlinks = Array.from(document.getElementById("navbar-default").children[0].children);
+  const header_logo = document.getElementsByClassName('header_logo')[0];
+
+  if (scrollTop > blockBottom) {
+    nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
+    header_logo.src = 'images/logo_black.svg';
+    document.getElementsByClassName('header_mobile-button')[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" fill="none" viewBox="0 0 17 14"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>';
+    if(window.screen.width > 720) {
+      for(let i = 0; i < navlinks.length - 2; i++) {
+        navlinks[i].children[0].style.color = "black";
+      };
+    } else {
+      for(let i = 0; i < navlinks.length - 2; i++) {
+        navlinks[i].children[0].style.color = "black";
+      };
+    }
+  } else {
+    nav.style.backgroundColor = '#000229';
+    header_logo.src = 'images/logo.svg';
+    document.getElementsByClassName('header_mobile-button')[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" fill="none" viewBox="0 0 17 14"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>';
+    if(window.screen.width > 720) {
+      for(let i = 0; i < navlinks.length - 2; i++) {
+        navlinks[i].children[0].style.color = "white";
+      };
+    } else {
+      for(let i = 0; i < navlinks.length - 2; i++) {
+        navlinks[i].children[0].style.color = "black";
+      };
+    }
+  }
+}
+
 // Navbar background
 window.addEventListener('scroll', (e) => {
     scrollHandler();
+
     var block = document.getElementsByClassName('section0')[0];
-    var nav = document.getElementById('nav');
     var scrollTop = window.pageYOffset || document.body.scrollTop;
     var blockBottom = block.offsetTop + block.offsetHeight;
-    const navlinks = Array.from(document.getElementById("navbar-default").children[0].children);
-    const header_logo = document.getElementsByClassName('header_logo')[0];
-    let header_mobile_button = document.getElementsByClassName('header_mobile-button')[0].innerHTML;
-
-    if (scrollTop > blockBottom) {
-      nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-      header_logo.src = 'images/logo_black.svg';
-      document.getElementsByClassName('header_mobile-button')[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" fill="none" viewBox="0 0 17 14"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>';
-      if(window.screen.width > 720) {
-        for(let i = 0; i < navlinks.length - 2; i++) {
-          navlinks[i].children[0].style.color = "black";
-        };
-      } else {
-        for(let i = 0; i < navlinks.length - 2; i++) {
-          navlinks[i].children[0].style.color = "black";
-        };
-      }
-    } else {
-      nav.style.backgroundColor = '#000229';
-      header_logo.src = 'images/logo.svg';
-      document.getElementsByClassName('header_mobile-button')[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" fill="none" viewBox="0 0 17 14"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>';
-      if(window.screen.width > 720) {
-        for(let i = 0; i < navlinks.length - 2; i++) {
-          navlinks[i].children[0].style.color = "white";
-        };
-      } else {
-        for(let i = 0; i < navlinks.length - 2; i++) {
-          navlinks[i].children[0].style.color = "black";
-        };
-      }
-    }
+    colorElements(scrollTop, blockBottom)
 });
 
 //
