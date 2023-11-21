@@ -817,6 +817,10 @@ nav {
         margin: 0 30px;
     }
 
+    .sections_buttons {
+        flex-direction: row;
+    }
+
     .section0_buttons {
         display: flex;
         justify-content: space-between;
