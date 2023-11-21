@@ -5,6 +5,11 @@ let header_mobile_button = '';
 function OpenMobileMenu() {
     isOpennedMenu = !isOpennedMenu;
     if(isOpennedMenu) {
+        var block = document.getElementsByClassName('section0')[0];
+        var scrollTop = window.pageYOffset || document.body.scrollTop;
+        var blockBottom = block.offsetTop + block.offsetHeight;
+        colorElements(scrollTop, blockBottom)
+        
         const header_logo = document.getElementsByClassName('header_logo')[0];
         header_logo.src = 'images/logo_black.svg';
         document.body.classList.add('lock');
