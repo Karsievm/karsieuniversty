@@ -742,7 +742,7 @@ nav {
 
 .sections_buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
 }
 
@@ -817,7 +817,7 @@ nav {
     }
 
     .sections_buttons {
-        flex-direction: row;
+        flex-direction: row !important;
     }
 
     .section0_buttons {
