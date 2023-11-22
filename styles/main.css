@@ -1142,3 +1142,7 @@ nav {
     transition: all 1s;
     transform: translateY(0%);
   }  }
+
+.project_button {
+    padding: 10px 20px;
+}
