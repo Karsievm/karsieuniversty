@@ -176,7 +176,7 @@ function colorElements(scrollTop, blockBottom) {
     nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
     header_logo.src = 'images/logo_black.svg';
     document.getElementsByClassName('header_mobile-button')[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" fill="none" viewBox="0 0 17 14"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>';
-    if(window.screen.width > 720) {
+    if(window.screen.width > 1200) {
       for(let i = 0; i < navlinks.length - 2; i++) {
         navlinks[i].children[0].style.color = "black";
       };
@@ -189,7 +189,7 @@ function colorElements(scrollTop, blockBottom) {
     nav.style.backgroundColor = '#000229';
     header_logo.src = 'images/logo.svg';
     document.getElementsByClassName('header_mobile-button')[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" fill="none" viewBox="0 0 17 14"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>';
-    if(window.screen.width > 720) {
+    if(window.screen.width > 1200) {
       for(let i = 0; i < navlinks.length - 2; i++) {
         navlinks[i].children[0].style.color = "white";
       };
