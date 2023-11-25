@@ -441,6 +441,12 @@ nav {
     padding: 10px 20px;
 }
 
+.project_info h2 {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .project_item div h1{
     font-size: 30px;
 }
