@@ -615,7 +615,11 @@ nav {
 }
 
 .contacts_icons > a {
-    margin: 0 10px;
+    margin: 0 20px;
+}
+
+.contacts_icons a {
+    padding-top: 33px;
 }
 
 /* roadmap */
@@ -1168,5 +1172,5 @@ nav {
 } 
 
 .project_button {
-    padding: 10px 20px;
+    padding: 10px 12px;
 }
