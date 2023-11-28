@@ -358,7 +358,7 @@ nav {
 }
 
 .section0 img {
-    width: 50%;
+    width: 80%;
 }
 
 .section0 img:first-child {
@@ -715,6 +715,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
 }
 
 .news_block {
@@ -732,10 +733,13 @@ nav {
 }
 
 .news_info {
-    height: 357px;
+    margin: 10px 20px;
+}
+
+.news_info h3 {
+    max-height: 357px;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 10px 20px;
 }
 
 .news_info button {
