@@ -331,7 +331,7 @@ button a {
     content: "";
     position: absolute;
     width: 70%;
-    height: 10%;
+    height: 6%;
     border-radius: 1445.1px;
     background: #7B82F6;
     filter: blur(225px);
@@ -419,7 +419,7 @@ button a {
 .section1_video {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; 
+    padding-bottom: 50%; 
 }
 
 .section1_video iframe {
@@ -716,6 +716,7 @@ button a {
     width: 100%;
 }
 
+/* news */
 .news {
     display: flex;
     flex-direction: column;
