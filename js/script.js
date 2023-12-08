@@ -288,5 +288,6 @@ btnUp.addEventListener();
 
 
 butter.init({
-  wrapperId: 'butter'
+  wrapperId: 'butter',
+  cancelOnTouch: true
 });
