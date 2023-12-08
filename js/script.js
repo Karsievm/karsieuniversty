@@ -285,3 +285,8 @@ const btnUp = {
 }
 
 btnUp.addEventListener();
+
+
+butter.init({
+  wrapperId: 'butter'
+});
