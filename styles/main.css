@@ -35,6 +35,10 @@ body.lock {
     overflow: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 48px;
     font-weight: 600;
