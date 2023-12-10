@@ -72,6 +72,7 @@ h3 {
 }
 
 .button_primary {
+    text-align: center;
     animation: out_pulse 0.3s ease-in-out forwards;
     transition: all .17s ease-in-out;
     display: flex;
@@ -99,6 +100,7 @@ h3 {
 }
 
 .button_secondary {
+    text-align: center;
     animation: out_pulse 0.3s ease-in-out forwards;
     transition: all .17s ease;
     display: flex;
