@@ -89,8 +89,8 @@ const blocksBlock = document.querySelectorAll('.projects_container');
 const blocksContainer = document.querySelectorAll('.projects');
 let blockWidth = document.querySelector('.project_item').offsetWidth + 30;
 const blocks = document.querySelectorAll('.project_item');
-const prevButton = document.getElementsByClassName('.prev-button');
-const nextButton = document.getElementsByClassName('.next-button');
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.getElementById('next-button');
 
 let visible = 0;
 
@@ -113,15 +113,23 @@ function prev(){
 function showBlocks() {
   blockWidth = document.querySelector('.project_item').offsetWidth + 30;
   if (currentIndex === 0) {
-      prevButton.disabled = true;
+      prevButton.style.background = 'transparent'
+      prevButton.style.outline = '3px solid #898EF6'
+      prevButton.style.color = '#898EF6'
     } else {
-      prevButton.disabled = false;
+      prevButton.style.background = '#898EF6'
+      prevButton.style.outline = 'none'
+      prevButton.style.color = 'white'
     }
   
     if (currentIndex === (blocks.length - visible)) {
-      nextButton.disabled = true;
+      nextButton.style.background = 'transparent'
+      nextButton.style.outline = '3px solid #898EF6'
+      nextButton.style.color = '#898EF6'
     } else {
-      nextButton.disabled = false;
+      nextButton.style.background = '#898EF6'
+      nextButton.style.outline = 'none'
+      nextButton.style.color = 'white'
     }
   blocks.forEach((block, index) => {
     block.style.transform = `translateX(-${blockWidth * currentIndex}px)`;
