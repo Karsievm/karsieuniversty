@@ -292,7 +292,7 @@ button a {
     color: #fff;
     padding-bottom: 3px;
 }
-.header_links ul li a {
+.header_links ul li .header_link {
     text-decoration: none;
     display: block; 
     padding-top: 0.5rem;
@@ -305,7 +305,7 @@ button a {
     font-size: 19px;
 }
 
-.header_links ul li button {
+.header_links ul li .header_link {
     margin-bottom: 5px !important;
 }
 
@@ -363,6 +363,7 @@ button a {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    align-items: center;
     animation: cover_buttons 1.5s forwards;
 }
 
@@ -414,7 +415,7 @@ button a {
     text-align: center;
 }
 
-.section0_buttons button {
+.section0_buttons a {
     margin: 5px 0 !important;
 }
 
@@ -510,7 +511,7 @@ button a {
     justify-content: center;
 }
 
-.project_mobile_buttons button {
+.project_mobile_buttons a {
     margin: 0 15px !important;
 }
 
@@ -752,7 +753,7 @@ button a {
     text-overflow: ellipsis;
 }
 
-.news_info button {
+.news_info a {
     margin-left: auto;
     width: 50px;
     height: 50px;
@@ -782,7 +783,7 @@ button a {
     align-items: center;
 }
 
-.sections_buttons button {
+.sections_buttons a {
     margin: 5px 0 !important;
 }
 
@@ -819,7 +820,7 @@ button a {
         flex-direction: center;
     }
 
-    .sections_buttons button {
+    .sections_buttons a {
         margin: 0 5px !important;
     }
 
@@ -844,7 +845,7 @@ button a {
         display: flex;
     }
 
-    .header_links ul li button {
+    .header_links ul li .header_link {
         margin-bottom: 0 !important;
     }
 
@@ -876,7 +877,7 @@ button a {
     .section0 div img {
         width: 60%;
     }
-    .section0_buttons button {
+    .section0_buttons a {
         margin: 0 5px !important;
     }
 
@@ -1026,7 +1027,7 @@ button a {
         margin: 0 15%;
     }
 
-    .header_links ul li button {
+    .header_links ul li .header_link {
         margin-bottom: 0;
     }
 
@@ -1055,7 +1056,7 @@ button a {
         transition: all 0s !important;
     }
 
-    .header_links ul li a {
+    .header_links ul li .header_link {
         padding-left: 10px; 
         background-color: transparent; 
     }
